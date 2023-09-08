@@ -80,7 +80,7 @@ const AnswerQuestion = ({ questionId }) => {
           Post Your Answer
         </button>
           <div className="d-flex mb-5 justify-content-between org_bt col-9">
-				<Link to="http://localhost:5173/">
+				<Link to="/">
 					<button className="back_dash">Back to dashboard</button>
 				</Link>
 				{/* <h4>Welcome</h4> */}
