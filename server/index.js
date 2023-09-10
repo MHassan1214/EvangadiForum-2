@@ -22,19 +22,19 @@ const host = process.env.SERVER_HOST;
 
 const server = express();
 
-//middleware
-// server.use(cors({
-//     origin: (origin, callback) => {
-//         // Allow requests from any origin
-//         callback(null, true);
-//     },
-//     credentials: true // Allow credentials (cookies) to be sent
-// }));
-
+// middleware
 server.use(cors({
-    origin: "https://evangadiforummariam.netlify.app",
+    origin: (origin, callback) => {
+        // Allow requests from any origin
+        callback(null, true);
+    },
     credentials: true // Allow credentials (cookies) to be sent
 }));
+
+// server.use(cors({
+//     origin: "https://evangadiforummariam.netlify.app",
+//     credentials: true // Allow credentials (cookies) to be sent
+// }));
 
 
 server.use(express.urlencoded({ extended: true }));
